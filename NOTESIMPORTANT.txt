@@ -1,0 +1,61 @@
+// array of special charcaters (string)
+// array of lowercase letters
+// array of numeric
+//array of uppercase
+numeric
+uppercase
+
+
+//function that prompts the user for their password selection (ask length first)
+//variable to store the length array 
+//alert to ask for length of password assign to length variable
+//if user input is not a number reject
+//if user input 8>, rejects
+//if user input more than 128 reject
+
+//variable to store user choice about special charcaters = answer to their confirm we use confirms not alerts)
+//add msg"Do you want special charcaters"
+
+//variable to store user choice about uppercase charcaters = answer to their confirm we use confirms not alerts)
+//add msg"Do you want special charcaters"
+
+//variable to store user choice about lowercase charcaters = answer to their confirm we use confirms not alerts)
+//add msg"Do you want special charcaters"
+
+//variable to store user choice about numeric charcaters = answer to their confirm we use confirms not alerts)
+//add msg"Do you want special charcaters"
+
+//if all characters confirms are false, tell user they must pick one group and return (add return here to function)
+
+//function to randomly generate password (array)
+    var options = mathfloor(mathrandom() * array.length)
+    return options(WILL generate one at a time thats why we need a loop)
+
+//function to generate password
+    //var = password options function
+    array = []
+    //check if option has special charachters
+    array = array.concat(specialCharacters)    
+    ////check if option has uppercase charachters
+    array = array.concat(specialCharacters)
+    //check if option has number charachters
+    //check if option has lowercase charachters(looking in the object itself to find the charcters)
+    //(true or false because they are confirms as in ok or cancel)
+//for loop to call randomly generate password, we want to pass our array
+
+//function to random generate password(array)
+//var options = mathfloor(Mathrandom()* array length)
+//return options
+
+were working our code into this context
+
+    }
+    //if options does not exsist st
+
+//Write password to the #password input
+
+ if !options () {
+
+//create function to generate password 
+    //var = password option functions
+    //check if options exsist return
