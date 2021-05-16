@@ -19,5 +19,3 @@ The following should show how the web application should look and function.
 ## Credits
 These resources helped to guide me in this activity and helped improve my understanding of javascript and function syntax
 (include resources)
-
-## 
