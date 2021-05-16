@@ -2,7 +2,7 @@
 //var lowcase = ("abcdefghijklmnopqrstuvwxyz");
 //var upcase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 //var number = ("1234567890");
-//var special = ("!@#$%^&*()");
+//var special = ("!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
 //var length = ("");
 
 var generateBtn = document.querySelector("#generate");
