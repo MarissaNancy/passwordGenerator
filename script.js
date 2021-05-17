@@ -1,9 +1,9 @@
 // Assignment Code
-//var lowcase = ("abcdefghijklmnopqrstuvwxyz");
-//var upcase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-//var number = ("1234567890");
-//var special = ("!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
-//var length = ("");
+var lowcase = ("abcdefghijklmnopqrstuvwxyz");
+var upcase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+var number = ("1234567890");
+var special = (""!#-$%&'()*+,-./:;<=>?@[]^_`{|}~");
+var length = ("");
 
 //do i need to declare here??var passwordLength =
 // varlowcaseOpt ? =

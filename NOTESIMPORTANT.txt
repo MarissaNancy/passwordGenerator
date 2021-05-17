@@ -47,15 +47,4 @@ uppercase
 //var options = mathfloor(Mathrandom()* array length)
 //return options
 
-were working our code into this context
-
-    }
-    //if options does not exsist st
-
 //Write password to the #password input
-
- if !options () {
-
-//create function to generate password 
-    //var = password option functions
-    //check if options exsist return
