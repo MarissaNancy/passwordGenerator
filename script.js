@@ -1,48 +1,68 @@
 // Assignment Code
-var lowcase = ("abcdefghijklmnopqrstuvwxyz");
-var upcase = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-var number = ("1234567890");
-var special = (""!#-$%&'()*+,-./:;<=>?@[]^_`{|}~");
-var length = ("");
+var lowcase = "abcdefghijklmnopqrstuvwxyz";
+var upcase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var number = "1234567890";
+var special = "!#-$%&'()*+,-./:;<=>?@[]^_`{|}~";
 
-//do i need to declare here??var passwordLength =
-// varlowcaseOpt ? =
-//var upcaseOpt = 
-//var numOpt = 
-//var specOpt =
+//all these functions need to be in one//
+function passwordOptions() {
+  var passwordlength = parseInt(prompt("Choose desired password length between 8 and 128"));  // 10
 
-//this function is temp//
-var passwordLength = function() {
-  var userChoice = window.prompt("Choose desired password length between 8 and 128");
-
-  if(!userChoice) {
+  if (isNaN(passwordlength) === true) {
+    alert("password length must be a number")
     return;
+  }
+
+  if (passwordlength < 8 || passwordlength > 128) {
+    alert("Must choose length between 8 and 128")
+    return;
+  }
+
+
+  var lowcaseOpt = window.confirm("Include lowcase letters?");
+  //have to be able to store response
+
+  var upcaseOpt = window.confirm("Include UPPERCASE letter?");
+  //have to store response here
+
+  var numOpt = window.confirm("Include numbers?");
+  //have to store response
+
+  var specOpt = window.confirm("Include special characters?");
+  //have to store response
+
+  //if they do not at least say "OK" to one of the prompts needs to be a window reminding them that they must choose one//
+  //need this to be === false so that if all of them are false it will show this alert//
+  window.alert("Must choose at least one special charachter option");
+  //return so that user can start process over again//
+
+
+  var options = {
+    passwordlength: passwordlength,
+    lowcaseOpt: lowcaseOpt,
+    upcaseOpt: upcaseOpt,
+    numOpt:numOpt,
+    specOpt:specOpt
+  }
+
+  return options;
 }
 
-//write something so that if user chooses something other than a number also rejects
 
-//include something here to state the parameters 
-window.alert("Password length can be between 8 and 128 characters long");
-//check if i need to add to this variable as in if they cancel Also make sure if its not a number reject, if number less than 8 reject if number more than 128 reject//
+function generatePassword() {
+  var getOptions = passwordOptions()
+  var garanteedChar;
+  var results = [];
 
-var lowcaseOpt = window.confirm("Include lowcase letters?");
-//have to be able to store response
-
-var upcaseOpt = window.confirm("Include UPPERCASE letter?");
-//have to store response here
-
-var numOpt = window.confirm("Include numbers?");
-//have to store response
-
-var specOpt = window.confirm("Include special characters?");
-//have to store response
-
-//if they do not at least say "OK" to one of the prompts needs to be a window reminding them that they must choose one//
-window.alert("Must choose at least one special charachter option");
-//return so that user can start process over again//
-
-
-
+  if (getOptions.lowcaseOpt === true) {
+    garanteedChar = garanteedChar.concat(lowcase)
+  }
+  if (getOptions.upcaseOpt === true) {
+    garanteedChar = garanteedChar.concat(upcase)
+    
+  }
+  // loop as many time as your pass length is based on index of your string and return character
+}
 
 var generateBtn = document.querySelector("#generate");
 
