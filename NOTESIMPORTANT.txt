@@ -27,6 +27,8 @@ uppercase
 
 //if all characters confirms are false, tell user they must pick one group and return (add return here to function)
 
+
+**this is where i left off**
 //function to randomly generate password (array)
     var options = mathfloor(mathrandom() * array.length)
     return options(WILL generate one at a time thats why we need a loop)
