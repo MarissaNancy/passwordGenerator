@@ -1,25 +1,14 @@
 // Assignment Code
-var lowcase = "abcdefghijklmnopqrstuvwxyz";
-var upcase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numbers = "1234567890";
-var special = "!#-$%&'()*+,-./:;<=>?@[]^_`{|}~";
+var lowcase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var upcase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var numbers = ["1","2","3","4","5","6","7","8","9","0"];
+var special = ["!","-","$","%","&","'","(",")","*","+","-",",","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
 
-var lowcaseOpt = false;
-var upcaseOpt = false;
-var numbersOpt = false;
-var specOpt = false;
-
-var passwordlength;
-var userChoice = "";
-var password
+var password;
 
 //all these functions need to be in one//
 function passwordOptions() {
   var userChoice = "";
-  var lowcaseOpt = false;
-  var upcaseOpt = false;
-  var numbersOpt = false;
-  var specOpt = false;
 
   var passwordlength = parseInt(prompt("Choose desired password length between 8 and 128"));
 
@@ -32,43 +21,49 @@ function passwordOptions() {
     return;
   }
 //do i need to store these answers and also do i need to put these with option variable line 59
-  var lowcaseOpt = window.confirm("Include lowcase letters?");
-  if (lowcaseOpt === true) {
-    userChoice = userChoice + lowcase;    
+  var lowcaseOpt = confirm("Include lowcase letters?");
+   if (lowcaseOpt === true) {
+   userChoice = userChoice + lowcase;    
   } 
 
-  var upcaseOpt = window.confirm("Include UPPERCASE letter?");
-  if (upcaseOpt === true) {
-    userChoice = userChoice + upcase;
+  var upcaseOpt = confirm("Include UPPERCASE letter?");
+   if (upcaseOpt === true) {
+   userChoice = userChoice + upcase;
   }
 
-  var numbersOpt = window.confirm("Include numbers?");
-  if (numbersOpt === true) {
-    userChoice = userChoice + numbers;
+  var numbersOpt = confirm("Include numbers?");
+   if (numbersOpt === true) {
+     userChoice = userChoice + numbers;
   }
 
-  var specOpt = window.confirm("Include special characters?");
-    if (specOpt === true) {
-      userChoice = userChoice + special;
+  var specOpt = confirm("Include special characters?");
+   if (specOpt === true) {
+       userChoice = userChoice + special;
+   }
+  if (lowcaseOpt === false && numbersOpt === false && upcaseOpt === false && specOpt === false) {
+    alert("Must choose one character option")
+    return;
   }
-  if (lowcaseOpt === false, numOpt === false, upcaseOpt === false, specOpt === false) {
-    alert("Must choose one character option");
-    generatePassword();
-  }
+  var options = {
+    passwordlength: passwordlength,
+    lowcaseOpt: lowcaseOpt,
+    upcaseOpt: upcaseOpt,
+    numbersOpt:numbersOpt,
+    specOpt:specOpt,
+  }  
+    return options;
 };
-var password = ""
 
-// loop as many time as your pass length is based on index of your string and return character,false statemants not needed becasue we only care if its true//
-//make sure its length and not password length//
-for (var i = 0; i< length; i++) {
-  var random = Math.floor(Math.random() * userChoice.length);
-
-  password = password + userChoice.charAt(random);
+//passwordoptions();
+//pass the concat array//
+function random(array) {
+  //the variable random stores the answer to (mathrandom * arraylength) generates a ran number to enter array//
+  
+  var random = Math.floor(Math.random() * array.length);
+   //lookin at index generated from varrandom goes into array 
+  var index = array[random];
 }
 
-  return password;
-
-};
 
 var generateBtn = document.querySelector("#generate");
 
