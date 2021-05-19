@@ -7,7 +7,7 @@ var special = ["!","-","$","%","&","'","(",")","*","+","-",",","/",":",";","<","
 var password;
 
 //all these functions need to be in one//
-function passwordOptions() {
+function passwordoptions() {
   var userChoice = "";
 
   var passwordlength = parseInt(prompt("Choose desired password length between 8 and 128"));
@@ -20,50 +20,70 @@ function passwordOptions() {
     alert("Must choose length between 8 and 128")
     return;
   }
-//do i need to store these answers and also do i need to put these with option variable line 59
-  var lowcaseOpt = confirm("Include lowcase letters?");
-   if (lowcaseOpt === true) {
+
+  var lowcaseopt = confirm("Include lowcase letters?");
+   if (lowcaseopt === true) {
    userChoice = userChoice + lowcase;    
   } 
 
-  var upcaseOpt = confirm("Include UPPERCASE letter?");
-   if (upcaseOpt === true) {
+  var upcaseopt = confirm("Include UPPERCASE letter?");
+   if (upcaseopt === true) {
    userChoice = userChoice + upcase;
   }
 
-  var numbersOpt = confirm("Include numbers?");
-   if (numbersOpt === true) {
+  var numbersopt = confirm("Include numbers?");
+   if (numbersopt === true) {
      userChoice = userChoice + numbers;
   }
 
-  var specOpt = confirm("Include special characters?");
-   if (specOpt === true) {
+  var specopt = confirm("Include special characters?");
+   if (specopt === true) {
        userChoice = userChoice + special;
    }
-  if (lowcaseOpt === false && numbersOpt === false && upcaseOpt === false && specOpt === false) {
+  if (lowcaseopt === false && numbersopt === false && upcaseopt === false && specopt === false) {
     alert("Must choose one character option")
     return;
   }
   var options = {
     passwordlength: passwordlength,
-    lowcaseOpt: lowcaseOpt,
-    upcaseOpt: upcaseOpt,
-    numbersOpt:numbersOpt,
-    specOpt:specOpt,
+    lowcaseopt: lowcaseopt,
+    upcaseopt: upcaseopt,
+    numbersopt:numbersopt,
+    specopt:specopt,
   }  
     return options;
 };
 
-//passwordoptions();
-//pass the concat array//
-function random(array) {
-  //the variable random stores the answer to (mathrandom * arraylength) generates a ran number to enter array//
-  
-  var random = Math.floor(Math.random() * array.length);
-   //lookin at index generated from varrandom goes into array 
-  var index = array[random];
-}
+passwordoptions();
 
+//pass the concat array//
+function generatePassword() {
+  var getoptions = passwordoptions();
+  var garanteedChar= [];
+  var results = [];
+
+  if (getoptions.lowcaseopt === true) {
+    garanteedChar = garanteedChar.concat(lowcase)
+  }
+  if (getoptions.upcaseOpt === true) {
+    garanteedChar = garanteedChar.concat(upcase)
+  } 
+  if (getoptions.numbersOpt === true) {
+    garanteedChar = garanteedChar.concat(numbersOpt)
+  }
+  if (getoptions.specOpt === true) {
+    garanteedChar === garanteedChar.concat(specOpt)    
+  }
+  return garanteedChar;
+}
+generatePassword();
+
+function random() {
+  
+  var random = Math.floor(Math.random() * generatePassword.length);
+  var index = generatePassword[random];
+  return index;
+}
 
 var generateBtn = document.querySelector("#generate");
 
