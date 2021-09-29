@@ -4,13 +4,12 @@ var upcase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q
 var numbers = ["1","2","3","4","5","6","7","8","9","0"];
 var special = ["!","-","$","%","&","'","(",")","*","+","-",",","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
 
-var password;
+// var password;
 
-//all these functions need to be in one//
 function passwordoptions() {
   var userChoice = "";
 
-  var passwordlength = parseInt(prompt("Choose desired password length between 8 and 128"));
+  var passwordlength = parseInt(prompt("To generate password choose a length between 8 and 128 characters"));
 
   if (isNaN(passwordlength) === true) {
     alert("password length must be a number")
@@ -65,14 +64,14 @@ function generatePassword() {
   if (getoptions.lowcaseopt === true) {
     garanteedChar = garanteedChar.concat(lowcase)
   }
-  if (getoptions.upcaseOpt === true) {
+  if (getoptions.upcaseopt === true) {
     garanteedChar = garanteedChar.concat(upcase)
   } 
-  if (getoptions.numbersOpt === true) {
-    garanteedChar = garanteedChar.concat(numbersOpt)
+  if (getoptions.numbersopt === true) {
+    garanteedChar = garanteedChar.concat(numbersopt)
   }
-  if (getoptions.specOpt === true) {
-    garanteedChar === garanteedChar.concat(specOpt)    
+  if (getoptions.specopt === true) {
+    garanteedChar === garanteedChar.concat(specopt)    
   }
   return garanteedChar;
 }
