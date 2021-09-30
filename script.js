@@ -55,34 +55,34 @@ function passwordoptions() {
 
 passwordoptions();
 
-//pass the concat array//
-function generatePassword() {
-  var getoptions = passwordoptions();
-  var garanteedChar= [];
-  var results = [];
+// //pass the concat array//
+// function generatePassword() {
+//   var getoptions = passwordoptions();
+//   var garanteedChar= [];
+//   var results = [];
 
-  if (getoptions.lowcaseopt === true) {
-    garanteedChar = garanteedChar.concat(lowcase)
-  }
-  if (getoptions.upcaseopt === true) {
-    garanteedChar = garanteedChar.concat(upcase)
-  } 
-  if (getoptions.numbersopt === true) {
-    garanteedChar = garanteedChar.concat(numbersopt)
-  }
-  if (getoptions.specopt === true) {
-    garanteedChar === garanteedChar.concat(specopt)    
-  }
-  return garanteedChar;
-}
-generatePassword();
+//   if (getoptions.lowcaseopt === true) {
+//     garanteedChar = garanteedChar.concat(lowcase)
+//   }
+//   if (getoptions.upcaseopt === true) {
+//     garanteedChar = garanteedChar.concat(upcase)
+//   } 
+//   if (getoptions.numbersopt === true) {
+//     garanteedChar = garanteedChar.concat(numbersopt)
+//   }
+//   if (getoptions.specopt === true) {
+//     garanteedChar === garanteedChar.concat(specopt)    
+//   }
+//   return garanteedChar;
+// }
+// generatePassword();
 
-function random() {
+// function random() {
   
-  var random = Math.floor(Math.random() * generatePassword.length);
-  var index = generatePassword[random];
-  return index;
-}
+//   var random = Math.floor(Math.random() * generatePassword.length);
+//   var index = generatePassword[random];
+//   return index;
+// }
 
 var generateBtn = document.querySelector("#generate");
 
